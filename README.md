@@ -1,3 +1,2 @@
-# GenesisProgram
-Repository holding the template to be used and edited for the Genesis Website
 # RocketElevatorsDigitalPresence
+Rocket Elevators's website made by Raphaël Vaudreuil
