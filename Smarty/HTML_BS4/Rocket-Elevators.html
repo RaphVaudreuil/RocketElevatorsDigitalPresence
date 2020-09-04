@@ -155,8 +155,8 @@
 									Add .external for an external link!
 								-->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#home">
+									<li><!-- HOME -->
+										<a href="#">
 											HOME
 										</a>
 									</li>
@@ -165,9 +165,9 @@
 											SERVICES
 										</a>
 									</li>
-									<li><!-- WORK -->
+									<li><!-- PORTFOLIO -->
 										<a href="#work">
-											WORK
+											PORTFOLIO
 										</a>
 									</li>
 									<li><!-- NEWS -->
@@ -175,19 +175,9 @@
 											NEWS
 										</a>
 									</li>
-									<li><!-- OVERVIEW -->
-										<a href="#overview">
-											OVERVIEW
-										</a>
-									</li>
 									<li><!-- CLIENTS -->
 										<a href="#clients">
 											CLIENTS
-										</a>
-									</li>
-									<li><!-- BLOG -->
-										<a class="external" href="blog-default-aside-left.html">
-											BLOG
 										</a>
 									</li>
 									<li><!-- CONTACT -->
@@ -303,10 +293,9 @@
 								data-endspeed="300"
 
 								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-group-lg">
-										<button type="button" class="btn btn-danger" href="#">Services</button> 
-										<button type="button" class="btn btn-info" href="#">Get a Quote</button>
-									</a>
+								<a class="btn btn-danger btn-lg" href="#services">SERVICES <i class="fa fa-angle-right"></i></a> 
+								&nbsp;  &nbsp; 
+								<a class="btn btn-info btn-lg" href="#">GET A QUOTE <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 
@@ -463,7 +452,7 @@
 
 					<div class="text-center">
 						<h2 class="fs-40 fw-300">The company has won numerous number of prices and particpated in numerous number of projects</h2>
-						<a class="btn btn-default btn-lg" href="#">PRICES AND PROJECTS <i class="fa fa-angle-right"></i></a> 
+						<a class="btn btn-default btn-lg" href="#portfolio">PRICES AND PROJECTS <i class="fa fa-angle-right"></i></a> 
 						&nbsp;  &nbsp; 
 						<a class="btn btn-default btn-lg" href="#">RESIDENTIAL SERVICES <i class="fa fa-angle-right"></i></a>
 						&nbsp;  &nbsp; 
@@ -795,7 +784,7 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-												<a class="ico-rounded lightbox" href="assets/images/t3.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="assets/images/t10.png" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -807,7 +796,7 @@
 											</span>
 										</span>
 
-										<img src="assets/images/t3.jpg" width="600" height="250" alt="">
+										<img src="assets/images/t10.png" width="600" height="250" alt="">
 									</figure>
 
 									<div class="item-box-desc">
@@ -832,7 +821,7 @@
 											<span class="inner">
 
 												<!-- lightbox -->
-												<a class="ico-rounded lightbox" href="assets/images/t4.jpg" data-plugin-options='{"type":"image"}'>
+												<a class="ico-rounded lightbox" href="assets/images/t11.jpg" data-plugin-options='{"type":"image"}'>
 													<span class="fa fa-plus fs-20"></span>
 												</a>
 
@@ -844,7 +833,7 @@
 											</span>
 										</span>
 
-										<img src="assets/images/t4.jpg" width="600" height="250" alt="">
+										<img src="assets/images/t11.jpg" width="600" height="250" alt="">
 									</figure>
 
 									<div class="item-box-desc">
@@ -1306,7 +1295,7 @@
 
 					<header class="text-center mb-60">
 						<h2>Contact Us</h2>
-						<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+						<p class="lead font-lato">Feel free to contact us if you have any questions!</p>
 						<hr />
 					</header>
 
@@ -1316,7 +1305,7 @@
 						<!-- FORM -->
 						<div class="col-md-8 col-sm-8">
 
-							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+							<h3>Please send us a full detailed message so we can answer back with our best knowledge</h3>
 
 							
 							<!--
@@ -1381,11 +1370,16 @@
 												<label for="contact:phone">Phone</label>
 												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
 											</div>
+
 									</div>
 									<div class="row">
 											<div class="col-md-8">
 												<label for="contact:subject">Subject *</label>
 												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+											<div class="col-md-4">
+												<label for="contact:name">Company Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
 											</div>
 											<div class="col-md-4">
 												<label for="contact_department">Department</label>
@@ -1396,10 +1390,18 @@
 													<option value="Architecture">Architecture</option>
 												</select>
 											</div>
+											<div class="col-md-4">
+												<label for="contact:name">Name Of The Building Project</label>
+												<input required type="text" value="" class="form-control" name="contact[name]" id="contact:name">
+											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-12">
 												<label for="contact:message">Message *</label>
+												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+											</div>
+											<div class="col-md-12">
+												<label for="contact:message">Description Of The Project *</label>
 												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
 											</div>
 									</div>
@@ -1451,9 +1453,9 @@
 							<hr />
 
 							<p>
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 418-725 Lebourgneuf, Quebec, Canada</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1581-701-0303">1(581)-701-0303</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mail to:info@codeboxx.bizz">info@codeboxx.bizz</a></span>
 							</p>
 
 						</div>
@@ -1482,9 +1484,9 @@
 
 							<!-- Small Description -->
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
+								Rocket Elevators provides exceptional products and services for a wide variety of lifts for over 30 years. It's isn't just about the number, it also represents our success and the products and service we provide.
 							</p>
-							<h2>(800) 123-4567</h2>
+							<h2>1(581) 701-0303</h2>
 						</div>
 						<!-- /col #1 -->
 
@@ -1589,7 +1591,7 @@
 				});
 
 			});
-
+			
 		</script>
-	</body>
+	</body>>
 </html>
