@@ -206,13 +206,14 @@
 					<h2>Quote Form</h2>
 				</div>
 
-				<!-- Question about the building's type -->
+		<!-- Question about the building's type -->
+		<div class="container">
 				<div class="col-sm-4">
 					<label for="contact_department">Building's Type</label>
-					<select class="form-control pointer" name="contact[Type]" id="selectMe">
-						<option value="">--- Select ---</option>
+					<select class="form-control pointer" name="buildingType" id="selectMe">
+						<option value="Select">--- Select ---</option>
 						<option value="Corporate">Corporate</option>
-						<option value="residential">Residential</option>
+						<option value="Residential">Residential</option>
 						<option value="Hybrid">Hybrid</option>
 						<option value="Commercial">Commercial</option>
 					</select>
@@ -221,9 +222,22 @@
 				<!-- /Question about the building's type -->
 
 				<!-- RESIDENTIAL SECTION -->
-				<div id="residential" class="building_type" >
-					
-				 </div>
+				<div class="row">
+					<div id="Residential">
+						<div class="building_type col-md-4">
+							<label for="numberAps">Number of apartments</label>
+							<input required type="number" value="" class="form-control" name="numberAps" id="numberAps" min="0">
+						</div>
+
+						<div class="building_type col-md-4">
+							<label for="numberFloors">Number of floors</label>
+							<input required type="number" value="" class="form-control" name="numberFloors" id="numberFloors" min="0">
+						</div>
+
+					</div>
+				</div>	
+			
+		</div>	
 
 
 
