@@ -8,4 +8,16 @@ $(document).ready(function () {
     })
 });
 
+//Estimation of the number of required cages 
+
+    //Commercial
+    var estiComme = $('#numberShaftsC').val();
+
+    //Residential
+    var apResi = $('#numberApsR').val();
+    var floorsResi = $('#numberFloorsR').val();
+    var apPerFloors = apResi/floorsResi; 
+    var estiResi = apResi/6;
+    
+
 
