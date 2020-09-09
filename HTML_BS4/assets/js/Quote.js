@@ -109,3 +109,21 @@ $(document).ready(function () {
         var estiCorpo = ElePerColC1 * colC1;
         $('#estiCorp').val(Math.round(estiCorpo));
     });
+
+    //UNIT PRICE PER ELEVATOR DEPENDING ON THE RANGE
+        //Commercial
+        $(document).click(function() {
+            if ($("#standardComm").is(":checked")) {
+
+                $('#unitComm').val(7565);
+    
+            }   else if ($("#premiumComm").is(":checked")) {
+    
+                $('#unitComm').val(12500);
+    
+            } else if ($("#exceliumComm").is(":checked")) {
+    
+                $('#unitComm').val(12345);
+    
+            }
+        });   
