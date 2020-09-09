@@ -38,15 +38,28 @@ $(document).ready(function () {
         };
     });
 
-    //Hybrid or Corporate
-    var occuH = $('#numberOccH').val();
-    var occuC1 = $('#numberOccC1').val();
-    var floorsH = $('#numberFloorsH').val();
-    var floorsC1 = $('#numberFloorsC1').val();
-    var basementsH = $('#numberBasementsH').val();
-    var basementsC1 = $('#numberBasementsC1').val();
-    var totalOccuH = occuH * (floorsH + basementsH);
-    var totlaOccuC1 = occuC1 * (floorsC1 + basementsC1);
+    //Hybrid
+    $(document).keyup(function() {
+        var occuH = $('#numberOccH').val();
+        var floorsH = $('#numberFloorsH').val();
+        var basementsH = $('#numberBasementsH').val();
+        var totalOccuH = occuH * (floorsH + basementsH);
+        var eleH = totalOccuH/1000;
+        var colH = (floorsH + basementsH)/20;
+        var ElePerColH = eleH/colH;
+        var estiHybrid = ElePerColH * colH;
+        $('#estiHyb').val(Math.round(estiHybrid));
+    });
 
-
-
+    //Corporate
+    $(document).keyup(function() {
+        var occuC1 = $('#numberOccC1').val();
+        var floorsC1 = $('#numberFloorsC1').val();
+        var basementsC1 = $('#numberBasementsC1').val();
+        var totlaOccuC1 = occuC1 * (floorsC1 + basementsC1);
+        var eleC1 = totlaOccuC1/1000;
+        var colC1 = (floorsC1 + basementsC1)/20;
+        var ElePerColC1 = eleC1/colC1;
+        var estiCorpo = ElePerColC1 * colC1;
+        $('#estiCorp').val(Math.round(estiCorpo));
+    });
