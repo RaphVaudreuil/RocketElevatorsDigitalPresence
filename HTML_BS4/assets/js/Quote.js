@@ -119,11 +119,63 @@ $(document).ready(function () {
     
             }   else if ($("#premiumComm").is(":checked")) {
     
-                $('#unitComm').val(12500);
+                $('#unitComm').val(12345);
     
             } else if ($("#exceliumComm").is(":checked")) {
     
-                $('#unitComm').val(12345);
+                $('#unitComm').val(15400);
     
             }
-        });   
+        });  
+        
+        //Residential
+        $(document).click(function() {
+            if ($("#standardR").is(":checked")) {
+
+                $('#unitR').val(7565);
+    
+            }   else if ($("#premiumR").is(":checked")) {
+    
+                $('#unitR').val(12345);
+    
+            } else if ($("#exceliumR").is(":checked")) {
+    
+                $('#unitR').val(15400);
+    
+            }
+        });
+        
+        //Corporate
+        $(document).click(function() {
+            if ($("#standardCorp").is(":checked")) {
+
+                $('#unitCorp').val(7565);
+    
+            }   else if ($("#premiumCorp").is(":checked")) {
+    
+                $('#unitCorp').val(12345);
+    
+            } else if ($("#exceliumCorp").is(":checked")) {
+    
+                $('#unitCorp').val(15400);
+    
+            }
+        });  
+
+        //Hybrid
+        $(document).click(function() {
+            if ($("#standardH").is(":checked")) {
+
+                $('#unitH').val(7565);
+    
+            }   else if ($("#premiumH").is(":checked")) {
+    
+                $('#unitH').val(12345);
+    
+            } else if ($("#exceliumH").is(":checked")) {
+    
+                $('#unitH').val(15400);
+    
+            }
+        });  
+    
