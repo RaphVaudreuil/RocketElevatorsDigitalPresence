@@ -274,6 +274,144 @@ $(document).ready(function () {
             }
 
         });
+        $(document).click(function() {
+            var iSCo = $('#estiCorp').val() * $('#unitCorp').val() * 0.10;
+            var iPCo = $('#estiCorp').val() * $('#unitCorp').val() * 0.13;
+            var iECo = $('#estiCorp').val() * $('#unitCorp').val() * 0.16;
+
+            if ($('#standardCorp').is(':checked')) {
+
+                $('#instCorp').val(iSCo.toFixed(2));
+
+            } else if ($('#premiumCorp').is(':checked')) {
+
+                $('#instCorp').val(iPCo.toFixed(2));
+
+            } else if ($('#exceliumCorp').is(':checked')) {
+
+                $('#instCorp').val(iECo.toFixed(2));
+            }
+
+        });
+
+        //Hybrid
+
+        $(document).keyup(function() {
+            var iSH = $('#estiHyb').val() * $('#unitH').val() * 0.10;
+            var iPH = $('#estiHyb').val() * $('#unitH').val() * 0.13;
+            var iEH = $('#estiHyb').val() * $('#unitH').val() * 0.16;
+
+            if ($('#standardH').is(':checked')) {
+
+                $('#instH').val(iSH.toFixed(2));
+
+            } else if ($('#premiumH').is(':checked')) {
+
+                $('#instH').val(iPH.toFixed(2));
+
+            } else if ($('#exceliumH').is(':checked')) {
+
+                $('#instH').val(iEH.toFixed(2));
+            }
+
+        });
+        $(document).click(function() {
+            var iSH = $('#estiHyb').val() * $('#unitH').val() * 0.10;
+            var iPH = $('#estiHyb').val() * $('#unitH').val() * 0.13;
+            var iEH = $('#estiHyb').val() * $('#unitH').val() * 0.16;
+
+            if ($('#standardH').is(':checked')) {
+
+                $('#instH').val(iSH.toFixed(2));
+
+            } else if ($('#premiumH').is(':checked')) {
+
+                $('#instH').val(iPH.toFixed(2));
+
+            } else if ($('#exceliumH').is(':checked')) {
+
+                $('#instH').val(iEH.toFixed(2));
+            }
+
+        });
+
+    //TOTAL COST
+    
+        //Residential
+        $(document).click(function() {
+            var priceR = $('#estiResi').val() * $('#unitR').val();
+            var insR = $('#instR').val();
+            var totalR = priceR+ +insR;
+
+            $('#totalR').val(totalR.toFixed(2));
+            
+        });
+        $(document).keyup(function() {
+            var priceR = $('#estiResi').val() * $('#unitR').val();
+            var insR = $('#instR').val();
+            var totalR = priceR+ +insR;
+
+            $('#totalR').val(totalR.toFixed(2));
+            
+        });
+
+        //Commercial
+        $(document).click(function() {
+            var priceComm = $('#estiComm').val() * $('#unitComm').val();
+            var insComm = $('#instComm').val();
+            var totalComm = priceComm+ +insComm;
+
+            $('#totalC').val(totalComm.toFixed(2));
+            
+        });
+        $(document).keyup(function() {
+            var priceComm = $('#estiComm').val() * $('#unitComm').val();
+            var insComm = $('#instComm').val();
+            var totalComm = priceComm+ +insComm;
+
+            $('#totalComm').val(totalComm.toFixed(2));
+            
+        });
+
+        //Corporate
+        $(document).click(function() {
+            var priceCorp = $('#estiCorp').val() * $('#unitCorp').val();
+            var insCorp = $('#instCorp').val();
+            var totalCorp = priceCorp+ +insCorp;
+
+            $('#totalCorp').val(totalCorp.toFixed(2));
+            
+        });
+        $(document).keyup(function() {
+            var priceCorp = $('#estiCorp').val() * $('#unitCorp').val();
+            var insCorp = $('#instCorp').val();
+            var totalCorp = priceCorp+ +insCorp;
+
+            $('#totalCorp').val(totalCorp.toFixed(2));
+            
+        });
+
+        //Hybrid
+        $(document).click(function() {
+            var priceH = $('#estiHyb').val() * $('#unitH').val();
+            var insH = $('#instH').val();
+            var totalH = priceH+ +insH;
+
+            $('#totalH').val(totalH.toFixed(2));
+            
+        });
+        $(document).keyup(function() {
+            var priceH = $('#estiHyb').val() * $('#unitH').val();
+            var insH = $('#instH').val();
+            var totalH = priceH+ +insH;
+
+            $('#totalH').val(totalH.toFixed(2));
+            
+        });
+
+
+
+
 
 
 
