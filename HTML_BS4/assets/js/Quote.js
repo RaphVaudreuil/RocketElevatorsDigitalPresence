@@ -24,66 +24,50 @@ $(document).ready(function () {
     $(document).keyup(function() {
         var apResi = $('#numberApsR').val();
         var floorsResi = $('#numberFloorsR').val();
-        var aveAps = apResi/floorsResi;
-        var estiResid = apResi/6;
-        $('#estiResi').val(Math.round(estiResid));
-        $('#aveResi').val(Math.round(aveAps));
-    
-        if (apResi > 20) {
-            $('#estiResi').val(Math.round(estiResid*2));
-        };
-    
-        if (apResi > 40) {
-            $('#estiResi').val(Math.round(estiResid*3));
-        };
-    
-        if(apResi > 60) {
-            $('#estiResi').val(Math.round(estiResid*4));
-        };
+        var aveAps = Math.ceil(apResi/floorsResi);
+        var estiResid = Math.ceil(aveAps/6);
+        var colResi = Math.ceil(floorsResi/20);
+        var total = colResi * estiResid;
+        $('#estiResi').val(Math.ceil(total));
+        $('#aveResi').val(Math.ceil(aveAps)); 
     });
     $(document).click(function() {
         var apResi = $('#numberApsR').val();
         var floorsResi = $('#numberFloorsR').val();
-        var aveAps = apResi/floorsResi;
-        var estiResid = apResi/6;
-        $('#estiResi').val(Math.round(estiResid));
-        $('#aveResi').val(Math.round(aveAps));
-    
-        if (apResi > 20) {
-            $('#estiResi').val(Math.round(estiResid*2));
-        };
-    
-        if (apResi > 40) {
-            $('#estiResi').val(Math.round(estiResid*3));
-        };
-    
-        if(apResi > 60) {
-            $('#estiResi').val(Math.round(estiResid*4));
-        };
-    });
+        var aveAps = Math.ceil(apResi/floorsResi);
+        var estiResid = Math.ceil(aveAps/6);
+        var colResi = Math.ceil(floorsResi/20);
+        var total = colResi * estiResid;
+        $('#estiResi').val(Math.ceil(total));
+        $('#aveResi').val(Math.ceil(aveAps));
+    }); 
+
 
     //Hybrid
     $(document).keyup(function() {
         var occuH = $('#numberOccH').val();
         var floorsH = $('#numberFloorsH').val();
         var basementsH = $('#numberBasementsH').val();
-        var totalOccuH = occuH * (floorsH + basementsH);
-        var eleH = totalOccuH/1000;
-        var colH = (floorsH + basementsH)/20;
-        var ElePerColH = eleH/colH;
+        var totalFH = Math.ceil(parseInt(floorsH) + parseInt(basementsH));
+        var totalOH = Math.ceil(totalFH * occuH);
+        var eleH = Math.ceil(totalOH/1000);
+        var colH = Math.ceil(totalFH/20);
+        var ElePerColH = Math.ceil(eleH/colH);
         var estiHybrid = ElePerColH * colH;
-        $('#estiHyb').val(Math.round(estiHybrid));
+        $('#estiHyb').val(estiHybrid);
+
     });
     $(document).click(function() {
         var occuH = $('#numberOccH').val();
         var floorsH = $('#numberFloorsH').val();
         var basementsH = $('#numberBasementsH').val();
-        var totalOccuH = occuH * (floorsH + basementsH);
-        var eleH = totalOccuH/1000;
-        var colH = (floorsH + basementsH)/20;
-        var ElePerColH = eleH/colH;
+        var totalFH = Math.ceil(parseInt(floorsH) + parseInt(basementsH));
+        var totalOH = Math.ceil(totalFH * occuH);
+        var eleH = Math.ceil(totalOH/1000);
+        var colH = Math.ceil(totalFH/20);
+        var ElePerColH = Math.ceil(eleH/colH);
         var estiHybrid = ElePerColH * colH;
-        $('#estiHyb').val(Math.round(estiHybrid));
+        $('#estiHyb').val(estiHybrid);
     });
 
     //Corporate
@@ -91,39 +75,45 @@ $(document).ready(function () {
         var occuC1 = $('#numberOccC1').val();
         var floorsC1 = $('#numberFloorsC1').val();
         var basementsC1 = $('#numberBasementsC1').val();
-        var totlaOccuC1 = occuC1 * (floorsC1 + basementsC1);
-        var eleC1 = totlaOccuC1/1000;
-        var colC1 = (floorsC1 + basementsC1)/20;
-        var ElePerColC1 = eleC1/colC1;
+        var totalF = Math.ceil(parseInt(floorsC1) + parseInt(basementsC1));
+        var totalOccu = Math.ceil(totalF * occuC1);
+        var eleC1 = Math.ceil(totalOccu/1000);
+        var colC1 = Math.ceil(totalF/20);
+        var ElePerColC1 = Math.ceil(eleC1/colC1);
         var estiCorpo = ElePerColC1 * colC1;
-        $('#estiCorp').val(Math.round(estiCorpo));
+        $('#estiCorp').val(estiCorpo);
     });
     $(document).click(function() {
         var occuC1 = $('#numberOccC1').val();
         var floorsC1 = $('#numberFloorsC1').val();
         var basementsC1 = $('#numberBasementsC1').val();
-        var totlaOccuC1 = occuC1 * (floorsC1 + basementsC1);
-        var eleC1 = totlaOccuC1/1000;
-        var colC1 = (floorsC1 + basementsC1)/20;
-        var ElePerColC1 = eleC1/colC1;
+        var totalF = Math.ceil(parseInt(floorsC1) + parseInt(basementsC1));
+        var totalOccu = Math.ceil(totalF * occuC1);
+        var eleC1 = Math.ceil(totalOccu/1000);
+        var colC1 = Math.ceil(totalF/20);
+        var ElePerColC1 = Math.ceil(eleC1/colC1);
         var estiCorpo = ElePerColC1 * colC1;
-        $('#estiCorp').val(Math.round(estiCorpo));
+        $('#estiCorp').val(estiCorpo);
     });
 
     //UNIT PRICE PER ELEVATOR DEPENDING ON THE RANGE
         //Commercial
+        var x = 7565;
+        var y = 12345;
+        var a = 15400;
+
         $(document).click(function() {
             if ($("#standardComm").is(":checked")) {
 
-                $('#unitComm').val(7565);
+                $('#unitComm').val(x.toFixed(2));
     
             }   else if ($("#premiumComm").is(":checked")) {
     
-                $('#unitComm').val(12345);
+                $('#unitComm').val(y.toFixed(2));
     
             } else if ($("#exceliumComm").is(":checked")) {
     
-                $('#unitComm').val(15400);
+                $('#unitComm').val(a.toFixed(2));
     
             }
         });  
@@ -132,15 +122,15 @@ $(document).ready(function () {
         $(document).click(function() {
             if ($("#standardR").is(":checked")) {
 
-                $('#unitR').val(7565);
+                $('#unitR').val(x.toFixed(2));
     
             }   else if ($("#premiumR").is(":checked")) {
     
-                $('#unitR').val(12345);
+                $('#unitR').val(y.toFixed(2));
     
             } else if ($("#exceliumR").is(":checked")) {
     
-                $('#unitR').val(15400);
+                $('#unitR').val(a.toFixed(2));
     
             }
         });
@@ -149,15 +139,15 @@ $(document).ready(function () {
         $(document).click(function() {
             if ($("#standardCorp").is(":checked")) {
 
-                $('#unitCorp').val(7565);
+                $('#unitCorp').val(x.toFixed(2));
     
             }   else if ($("#premiumCorp").is(":checked")) {
     
-                $('#unitCorp').val(12345);
+                $('#unitCorp').val(y.toFixed(2));
     
             } else if ($("#exceliumCorp").is(":checked")) {
     
-                $('#unitCorp').val(15400);
+                $('#unitCorp').val(a.toFixed(2));
     
             }
         });  
@@ -166,16 +156,127 @@ $(document).ready(function () {
         $(document).click(function() {
             if ($("#standardH").is(":checked")) {
 
-                $('#unitH').val(7565);
+                $('#unitH').val(x.toFixed(2));
     
             }   else if ($("#premiumH").is(":checked")) {
     
-                $('#unitH').val(12345);
+                $('#unitH').val(y.toFixed(2));
     
             } else if ($("#exceliumH").is(":checked")) {
     
-                $('#unitH').val(15400);
+                $('#unitH').val(a.toFixed(2));
     
             }
-        });  
+        }); 
+        
+    //INSTALLATION COST
+        
+        //Commercial
+
+        $(document).keyup(function() {
+            var iSC = $('#estiComm').val() * $('#unitComm').val() * 0.10;
+            var iPC = $('#estiComm').val() * $('#unitComm').val() * 0.13;
+            var iEC = $('#estiComm').val() * $('#unitComm').val() * 0.16;
+
+            if ($('#standardComm').is(':checked')) {
+
+                $('#instComm').val(iSC.toFixed(2));
+
+            } else if ($('#premiumComm').is(':checked')) {
+
+                $('#instComm').val(iPC.toFixed(2));
+
+            } else if ($('#exceliumComm').is(':checked')) {
+
+                $('#instComm').val(iEC.toFixed(2));
+            }
+
+        });
+        $(document).click(function() {
+            var iSC = $('#estiComm').val() * $('#unitComm').val() * 0.10;
+            var iPC = $('#estiComm').val() * $('#unitComm').val() * 0.13;
+            var iEC = $('#estiComm').val() * $('#unitComm').val() * 0.16;
+
+            if ($('#standardComm').is(':checked')) {
+
+                $('#instComm').val(iSC.toFixed(2));
+
+            } else if ($('#premiumComm').is(':checked')) {
+
+                $('#instComm').val(iPC.toFixed(2));
+
+            } else if ($('#exceliumComm').is(':checked')) {
+
+                $('#instComm').val(iEC.toFixed(2));
+            }
+
+        });
+
+        //Residential
+
+        $(document).keyup(function() {
+            var iSR = $('#estiResi').val() * $('#unitR').val() * 0.10;
+            var iPR = $('#estiResi').val() * $('#unitR').val() * 0.13;
+            var iER = $('#estiResi').val() * $('#unitR').val() * 0.16;
+
+            if ($('#standardR').is(':checked')) {
+
+                $('#instR').val(iSR.toFixed(2));
+
+            } else if ($('#premiumR').is(':checked')) {
+
+                $('#instR').val(iPR.toFixed(2));
+
+            } else if ($('#exceliumR').is(':checked')) {
+
+                $('#instR').val(iER.toFixed(2));
+            }
+
+        });
+        $(document).click(function() {
+            var iSR = $('#estiResi').val() * $('#unitR').val() * 0.10;
+            var iPR = $('#estiResi').val() * $('#unitR').val() * 0.13;
+            var iER = $('#estiResi').val() * $('#unitR').val() * 0.16;
+
+            if ($('#standardR').is(':checked')) {
+
+                $('#instR').val(iSR.toFixed(2));
+
+            } else if ($('#premiumR').is(':checked')) {
+
+                $('#instR').val(iPR.toFixed(2));
+
+            } else if ($('#exceliumR').is(':checked')) {
+
+                $('#instR').val(iER.toFixed(2));
+            }
+
+        });
+
+        //Corporate
+
+        $(document).keyup(function() {
+            var iSCo = $('#estiCorp').val() * $('#unitCorp').val() * 0.10;
+            var iPCo = $('#estiCorp').val() * $('#unitCorp').val() * 0.13;
+            var iECo = $('#estiCorp').val() * $('#unitCorp').val() * 0.16;
+
+            if ($('#standardCorp').is(':checked')) {
+
+                $('#instCorp').val(iSCo.toFixed(2));
+
+            } else if ($('#premiumCorp').is(':checked')) {
+
+                $('#instCorp').val(iPCo.toFixed(2));
+
+            } else if ($('#exceliumCorp').is(':checked')) {
+
+                $('#instCorp').val(iECo.toFixed(2));
+            }
+
+        });
+
+
+
+        
+
     
