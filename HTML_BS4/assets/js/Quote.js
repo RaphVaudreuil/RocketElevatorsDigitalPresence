@@ -106,11 +106,11 @@ $(document).ready(function () {
 
             if ($("#standardComm").is(":checked")) {
 
-                $('#unitComm').val(x.toFixed(2) + "$");
+                $('#unitComm').val(x.toFixed(2));
     
             }   else if ($("#premiumComm").is(":checked")) {
     
-                $('#unitComm').val(y.toFixed(2) + "$");
+                $('#unitComm').val(y.toFixed(2));
     
             } else if ($("#exceliumComm").is(":checked")) {
     
