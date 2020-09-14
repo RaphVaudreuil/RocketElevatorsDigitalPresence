@@ -409,13 +409,3 @@ $(document).ready(function () {
             $('#totalH').val(totalH.toFixed(2));
             
         });
-
-
-
-
-
-
-
-        
-
-    
